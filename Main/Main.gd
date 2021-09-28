@@ -29,6 +29,7 @@ func _on_Timer_timeout() -> void:
 func game_tick() -> void:
 	previous_generation = current_generation.duplicate()
 	calculate_new_generation()
+	previous_generation.clear()
 
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_pressed("add"):
